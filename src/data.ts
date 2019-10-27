@@ -30,18 +30,22 @@ export const treeNode: Node<number> = {
 }
 
 export const treeNode1: Node<number> = {
-    val: 3,
+    val: 0,
     right:  {
-        val: 2,
-        right: null,
+        val: 20,
+        right: {
+            val: 7,
+            right: null,
+            left: null,
+        },
         left: {
-            val: 6,
+            val: 15,
             right: null,
             left: null,
         },
     },
     left:  {
-        val: 1,
+        val: 9,
         right: {
             val: 4,
             right: null,

@@ -12,6 +12,13 @@ class Stack<T extends {}> {
     public push(item: Node<T>): void {
         this.items.push(item)
     }
+    public shift(): Node<T> {
+        if (this.items.length === 0) {
+            return null;
+        } else {
+            return this.items.shift();
+        }
+    }
     public pop(): Node<T> {
         if (this.items.length === 0) {
             return null;
@@ -21,6 +28,9 @@ class Stack<T extends {}> {
     }
     public peek(): Node<T> {
         return this.items[this.items.length - 1];
+    }
+    public size(): number {
+        return this.items.length;
     }
     public isEmpty(): boolean {
         return this.items.length === 0;
