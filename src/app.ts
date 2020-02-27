@@ -1,27 +1,31 @@
 import express from 'express';
-import {Node} from "./Stack";
-import {preOrder} from "./preOrder";
-import {inOrder} from './inOrder';
-import {postOrder} from './postOrder';
-import {treeNode1, treeNode2, treeNode3, treeNode4, treeNode5, treeNode6} from "./data";
-import {levelOrder} from "./levelOrder";
-import {postOrderRecurs} from "./postOrderRecurs";
-import {maxDepth} from "./maxDepth";
-import {isSymmetric} from "./isSymmetric";
-import {hasPathSum} from "./hasPathSum";
+import {plusOne} from "./plusOne";
+import {diagonalTraverse} from "./diagonalTraverse";
+import {numberOfSteps} from "./numberOfSteps";
+import {subtractProductAndSum} from "./subtractProductAndSum";
+import {defangIPaddr} from "./defangIPaddr";
+import {findNumbers} from "./findNumbers";
+import {balancedStringSplit} from "./balancedStringSplit";
+import {countNegatives} from "./countNegatives";
+const path = require('path');
+const router = express.Router();
 
 const app = express();
 const port = 5555;
-app.get('/', (req, res) => {
-    res.send('The sedulous hyena ate the antelope!');
+
+router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-
+app.use('/', router);
 
 app.listen(port, err => {
+    // console.log(numberOfSteps(123));
+    // console.log(numberOfSteps(14));
+    // console.log(numberOfSteps(8));
+    console.log(countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]));
     if (err) {
         return console.error(err);
     }
-    console.log(hasPathSum<number>(treeNode6, 23));
     return console.log(`server is listening on ${port}`);
 });
