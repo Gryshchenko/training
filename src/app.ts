@@ -7,6 +7,7 @@ import {defangIPaddr} from "./defangIPaddr";
 import {findNumbers} from "./findNumbers";
 import {balancedStringSplit} from "./balancedStringSplit";
 import {countNegatives} from "./countNegatives";
+import {maximum69Number} from "./maximum69Number";
 const path = require('path');
 const router = express.Router();
 
@@ -23,7 +24,8 @@ app.listen(port, err => {
     // console.log(numberOfSteps(123));
     // console.log(numberOfSteps(14));
     // console.log(numberOfSteps(8));
-    console.log(countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]));
+    console.log(maximum69Number(6999));
+    console.log(maximum69Number(9669));
     if (err) {
         return console.error(err);
     }

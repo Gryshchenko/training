@@ -7,7 +7,15 @@
 <body>
     <input type="button" value="sad" onClick="test">
 </body>
-<script type="module">
+<script type="text/javascript">
 
+    const a = {
+        b: 2
+    };
+    const b = {
+        a: a.b
+    }
+    b.a = 3;
+    console.log(b, a)
 </script>
 </html>
