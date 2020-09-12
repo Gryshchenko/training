@@ -1,13 +1,5 @@
 import express from 'express';
-import {plusOne} from "./plusOne";
-import {diagonalTraverse} from "./diagonalTraverse";
-import {numberOfSteps} from "./numberOfSteps";
-import {subtractProductAndSum} from "./subtractProductAndSum";
-import {defangIPaddr} from "./defangIPaddr";
-import {findNumbers} from "./findNumbers";
-import {balancedStringSplit} from "./balancedStringSplit";
-import {countNegatives} from "./countNegatives";
-import {maximum69Number} from "./maximum69Number";
+import {QuickUnion} from "./QuickUnion";
 const path = require('path');
 const router = express.Router();
 
@@ -21,11 +13,13 @@ router.get('/',function(req,res){
 app.use('/', router);
 
 app.listen(port, err => {
-    // console.log(numberOfSteps(123));
-    // console.log(numberOfSteps(14));
-    // console.log(numberOfSteps(8));
-    console.log(maximum69Number(6999));
-    console.log(maximum69Number(9669));
+    const q = new QuickUnion(10);
+    q.union(0, 2);
+    q.union(2, 3);
+    q.union(7, 9);
+    q.union(6, 8);
+    q.union(4, 6);
+    q.union(8, 9);
     if (err) {
         return console.error(err);
     }

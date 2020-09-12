@@ -1,7 +1,7 @@
 class QuickFind {
     private nodes: number[] = [];
 
-    public QuickFind(N: number): void {
+    public constructor(N: number) {
         this.nodes = new Array(N);
         for (let i: number = 0; i < N; i++) {
             this.nodes[i] = i;
