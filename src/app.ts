@@ -2,6 +2,7 @@ import express from 'express';
 import {QuickUnion} from "./QuickUnion";
 import {binary_search} from "./binary_search";
 import {selectionSort} from "./selectionSort";
+import {quickSort} from "./QuickSort";
 const path = require('path');
 const router = express.Router();
 
@@ -15,7 +16,7 @@ router.get('/',function(req,res){
 app.use('/', router);
 
 app.listen(port, err => {
-    console.log(selectionSort([9,8,7,6,5,4,3,2,1]));
+    console.log(quickSort([9,8,7,6,5,4,3,2,1]));
     if (err) {
         return console.error(err);
     }
